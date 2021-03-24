@@ -68,7 +68,7 @@ FLU2016.columns
 
 plt.plot(FLU2016['Energy'])
 plt.title('First look at input data')
-plt.ylabel(ylabel='kWh')
+plt.ylabel(ylabel='kWh/15m')
 plt.xlabel(xlabel= '???')
 
 #%% [9] What about injection and offtake?
@@ -81,7 +81,7 @@ FLU2016.loc[FLU2016['Offtake/Injection']=='Injectie', 'Energy']= FLU2016['Energy
 
 plt.plot(FLU2016['Energy'])
 plt.title('Second look at input data')
-plt.ylabel(ylabel='kWh')
+plt.ylabel(ylabel='kWh/15min')
 plt.xlabel(xlabel= '???')
 
 #%% [11] Pivot per consumer ID 
@@ -123,7 +123,7 @@ myFmt = DateFormatter('%m')
 fig, ax= plt.subplots(figsize= (10,6))
 ax.plot(house1)
 ax.set(title='House 0 Energy Consupmtion 2016')
-ax.set(xlabel= 'Month', ylabel= 'Energy [kWh]')
+ax.set(xlabel= 'Month', ylabel= 'Energy [kWh/15min]')
 ax.xaxis.set_major_formatter(myFmt); 
 ax.tick_params(axis='x', labelrotation=45)
  # month formatter 

@@ -53,7 +53,7 @@ Pattern.index= Hfull.index
 plt.plot(Pattern)
 plt.title('Energy Consumption Patterns 2016')
 plt.xlabel('Month')
-plt.ylabel('Energy [kWh]')
+plt.ylabel('Energy [kWh/15m]')
 
 #might be slow to run 
 #what can you tell about the different patterns? 
@@ -85,7 +85,7 @@ ax.plot(March5.iloc[:,2], '-+')
 ax.plot(March5.iloc[:,3], '--')
 ax.plot(March5.iloc[:,4], '-D')
 ax.legend(['K1', 'K2', 'K3', 'K4', 'K5'])
-ax.set(xlabel="Hour", ylabel="kWh")
+ax.set(xlabel="Hour", ylabel="kWh/15m")
 ax.set(title="Energy Consumption per Cluster");
 ax.xaxis.set_major_formatter(myFmt); 
 plt.savefig('clustM5flu.png', format= 'png', dpi= 600)	

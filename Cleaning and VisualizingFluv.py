@@ -136,7 +136,7 @@ def sel(X, n):
 plt.plot(Hfull.T.iloc[8])
 plt.title('Energy Consumption over one year')
 plt.xlabel('Month')
-plt.ylabel('Energy [kWh]')
+plt.ylabel('Energy [kWh/15m]')
 
 #TIP try it with different houses and see what preliminary conclusions you can make. 
 
@@ -153,7 +153,7 @@ H0= sel(Hfull,8)
 plt.plot(H0.T.values)
 plt.title('Energy consumption')
 plt.xlabel('Time period')
-plt.ylabel('Energy[kWh]')
+plt.ylabel('Energy[kWh/15m]')
 
 # this graph shows an overlay of the daily consumption curves 
 
@@ -187,14 +187,14 @@ aggdem.columns= aggdem.columns.get_level_values(1)
 plt.plot(totdem)
 plt.title('Aggregated Energy Consumption over one year')
 plt.xlabel('Month')
-plt.ylabel('Energy [kWh]')
+plt.ylabel('Energy [kWh/15m]')
 
 #%% Day view 
 
 plt.plot(aggdem.T.values)
 plt.title('Energy consumption')
 plt.xlabel('Time period')
-plt.ylabel('Energy[kWh]')
+plt.ylabel('Energy[kWh/15m]')
 
 #%% Heatmap 
 
